@@ -1,9 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const displayStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    background: 'grey',
+    height: 100,
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'right',
+    padding: 4
+};
+
 const Display = props => {
   const { result } = props;
-  return <h1>{result}</h1>;
+  return <div style={displayStyle}><h1>{result}</h1></div>;
 };
 
 Display.propTypes = {

@@ -2,43 +2,43 @@ import React from 'react';
 import Button from './Button';
 
 const rowStyle = {
-  height: 100
+  height: 100,
 }
 
 const panelStyle = {
   display: 'flex',
-  flexDirection: 'column'
+  flexDirection: 'column',
 }
 
-const ButtonPanel = props => ( // eslint-disable-line
+const ButtonPanel = () => (
   <div style={panelStyle}>
     <div style={rowStyle}>
-      <Button buttonName="AC" />
-      <Button buttonName="+/-" />
-      <Button buttonName="%" />
+      <Button buttonName="AC" color="#e0e0e0" />
+      <Button buttonName="+/-" color="#e0e0e0" />
+      <Button buttonName="%" color="#e0e0e0" />
       <Button buttonName="÷" />
     </div>
     <div style={rowStyle}>
-      <Button buttonName="7" />
-      <Button buttonName="8" />
-      <Button buttonName="9" />
+      <Button buttonName="7" color="#e0e0e0" />
+      <Button buttonName="8" color="#e0e0e0" />
+      <Button buttonName="9" color="#e0e0e0" />
       <Button buttonName="X" />
     </div>
     <div style={rowStyle}>
-      <Button buttonName="4" />
-      <Button buttonName="5" />
-      <Button buttonName="6" />
+      <Button buttonName="4" color="#e0e0e0" />
+      <Button buttonName="5" color="#e0e0e0" />
+      <Button buttonName="6" color="#e0e0e0" />
       <Button buttonName="-" />
     </div>
     <div style={rowStyle}>
-      <Button buttonName="1" />
-      <Button buttonName="2" />
-      <Button buttonName="3" />
+      <Button buttonName="1" color="#e0e0e0" />
+      <Button buttonName="2" color="#e0e0e0" />
+      <Button buttonName="3" color="#e0e0e0" />
       <Button buttonName="+" />
     </div>
     <div style={rowStyle}>
-      <Button buttonName="0" />
-      <Button buttonName="." />
+      <Button buttonName="0" wide={true} color="#e0e0e0" />
+      <Button buttonName="." color="#e0e0e0" />
       <Button buttonName="=" />
     </div>
   </div>

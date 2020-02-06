@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const displayStyle = {
     display: 'flex',
-    justifyContent: 'space-between',
-    background: 'grey',
+    justifyContent: 'flex-end',
+    background: '#848593',
     height: 100,
     color: 'white',
     fontWeight: 'bold',

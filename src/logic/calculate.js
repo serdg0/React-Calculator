@@ -2,23 +2,31 @@ import operate from './operate';
 
 const calculate = (data, buttonName) => {
   const operators = ['+', '-', 'X', '÷', '%'];
-  let { total } = data;
-  let { next } = data;
-  const { operation } = data;
+  const digits = Array.from({ length: 10 }, (v, i) => `${i}`);
+  let { total, next, operation } = data;
   const library = {
     '+/-': () => {
-      total *= -1;
       next *= -1;
     },
     '=': () => total,
-    AC: () => { total = 0; },
+    AC: () => {
+      total = null;
+      next = null;
+      operation = null;
+    },
   };
   const isOperation = buttonName => operators.includes(buttonName);
+  const isDigit = buttonName => digits.includes(buttonName);
 
   if (isOperation(buttonName)) {
-    return operate(total, next, operation);
+    total = operate(total, next, operation);
+  } else if (isDigit(buttonName)) {
+    next += buttonName;
+  } else {
+    library[buttonName]();
   }
-  return library[operation];
+
+  return data;
 };
 
 export default calculate;

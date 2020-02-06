@@ -1,4 +1,4 @@
-const Big = require('big.js');
+const Big = require('big-js');
 
 const operate = (numberOne, numberTwo, operation) => {
   const library = {

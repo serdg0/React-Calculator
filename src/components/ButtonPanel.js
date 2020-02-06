@@ -3,12 +3,12 @@ import Button from './Button';
 
 const rowStyle = {
   height: 100,
-}
+};
 
 const panelStyle = {
   display: 'flex',
   flexDirection: 'column',
-}
+};
 
 const ButtonPanel = () => (
   <div style={panelStyle}>
@@ -37,7 +37,7 @@ const ButtonPanel = () => (
       <Button buttonName="+" />
     </div>
     <div style={rowStyle}>
-      <Button buttonName="0" wide={true} color="#e0e0e0" />
+      <Button buttonName="0" wide color="#e0e0e0" />
       <Button buttonName="." color="#e0e0e0" />
       <Button buttonName="=" />
     </div>

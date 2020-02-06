@@ -5,8 +5,8 @@ import ButtonPanel from './ButtonPanel';
 const calcStyle = {
   display: 'flex',
   flexDirection: 'column',
-  width: 700
-}
+  width: 700,
+};
 
 class App extends React.Component {// eslint-disable-line
   render() {

@@ -8,7 +8,6 @@ const calculate = (data, buttonName) => {
     '+/-': () => {
       next *= -1;
     },
-    '=': () => total,
     AC: () => {
       total = null;
       next = null;
@@ -19,9 +18,13 @@ const calculate = (data, buttonName) => {
   const isDigit = buttonName => digits.includes(buttonName);
 
   if (isOperation(buttonName)) {
+    total = next;
+    next = null;
+    operation = buttonName;
+  } else if ((isDigit(buttonName) && total && next)) {
     total = operate(total, next, operation);
   } else if (isDigit(buttonName)) {
-    next += buttonName;
+    next = (next == null ? '' : next) + buttonName;
   } else {
     library[buttonName]();
   }

@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { color } = props;
-  const { wide } = props;
+  const { color, wide, clickHandler, buttonName } = props;
   const btnStyle = {
     width: '25%',
     height: '100%',
@@ -13,11 +12,10 @@ const Button = props => {
     fontWeight: 'bold',
     background: color,
   };
-  const { buttonName } = props;
   if (wide) {
     btnStyle.width = '50%';
   }
-  return <button style={btnStyle} type="button">{buttonName}</button>;
+  return <button onClick={() => clickHandler(buttonName)} style={btnStyle} type="button">{buttonName}</button>;
 };
 
 Button.defaultProps = {
@@ -29,6 +27,7 @@ Button.propTypes = {
   buttonName: PropTypes.string.isRequired,
   color: PropTypes.string,
   wide: PropTypes.bool,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default Button;

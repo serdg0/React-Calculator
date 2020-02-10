@@ -5,6 +5,7 @@ const displayStyle = {
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
+  border: '2px solid black',
   justifyContent: 'flex-end',
   background: '#848593',
   height: 100,

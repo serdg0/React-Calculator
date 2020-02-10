@@ -10,6 +10,9 @@ const operate = (numberOne, numberTwo, operation) => {
   };
   const numA = Big(numberOne);
   const numB = Big(numberTwo);
+  if (operation === '÷' && numberTwo === '0') {
+    return 'INFINITE';
+  }
   return library[operation](numA, numB).toString();
 };
 

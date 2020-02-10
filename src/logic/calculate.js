@@ -17,22 +17,22 @@ const calculate = (data, buttonName) => {
     next = null;
     operation = buttonName;
   } else if (isDigit(buttonName)) {
-    if (buttonName === '.' && next.includes(buttonName)){
+    if (buttonName === '.' && next.includes(buttonName)) {
       return true;
     }
     next = (next == null ? '' : next) + buttonName;
   } else if (isOther(buttonName)) {
-     if (buttonName === '=') {
-    total = operate(total, next, operation);
-    next = null;
-     } else if (buttonName === '+/-') {
-       const nextOp = (-1 * parseInt(next));
-       next = nextOp.toString();
-     } else {
-       total = null;
-       next = null;
-       operation = null;
-     }
+    if (buttonName === '=') {
+      total = operate(total, next, operation);
+      next = null;
+    } else if (buttonName === '+/-') {
+      const nextOp = (-1 * parseInt(next, 10));
+      next = nextOp.toString();
+    } else {
+      total = null;
+      next = null;
+      operation = null;
+    }
   }
   return { total, next, operation };
 };

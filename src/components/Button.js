@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { color, wide, clickHandler, buttonName } = props;
+  const {
+    color, wide, clickHandler, buttonName,
+  } = props;
   const btnStyle = {
     width: '25%',
     height: '100%',

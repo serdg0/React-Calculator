@@ -10,14 +10,21 @@ const calculate = (data, buttonName) => {
   const isOther = buttonName => others.includes(buttonName);
 
   if (isOperation(buttonName)) {
-    total = next.toString();
+    if (total && next == null) {
+      next = total;
+    }
+    total = next;
     next = null;
     operation = buttonName;
   } else if (isDigit(buttonName)) {
+    if (buttonName === '.' && next.includes(buttonName)){
+      return true;
+    }
     next = (next == null ? '' : next) + buttonName;
   } else if (isOther(buttonName)) {
      if (buttonName === '=') {
     total = operate(total, next, operation);
+    next = null;
      } else if (buttonName === '+/-') {
        const nextOp = (-1 * parseInt(next));
        next = nextOp.toString();
@@ -27,8 +34,6 @@ const calculate = (data, buttonName) => {
        operation = null;
      }
   }
-
-  console.log(total, next, operation)
   return { total, next, operation };
 };
 

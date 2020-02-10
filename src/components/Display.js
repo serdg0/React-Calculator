@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 const displayStyle = {
   display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
   justifyContent: 'flex-end',
   background: '#848593',
   height: 100,

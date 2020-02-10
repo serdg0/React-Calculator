@@ -34,7 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <div style={calcStyle}>
-        <Display result={this.state.total || this.state.next} />
+        <Display result={this.state.next || this.state.total} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

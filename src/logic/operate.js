@@ -10,8 +10,7 @@ const operate = (numberOne, numberTwo, operation) => {
   };
   const numA = Big(numberOne);
   const numB = Big(numberTwo);
-
-  return library[operation](numA, numB);
+  return library[operation](numA, numB).toString();
 };
 
 export default operate;

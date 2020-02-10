@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 const rowStyle = {
@@ -10,38 +11,45 @@ const panelStyle = {
   flexDirection: 'column',
 };
 
-const ButtonPanel = () => (
-  <div style={panelStyle}>
-    <div style={rowStyle}>
-      <Button buttonName="AC" color="#e0e0e0" />
-      <Button buttonName="+/-" color="#e0e0e0" />
-      <Button buttonName="%" color="#e0e0e0" />
-      <Button buttonName="÷" />
+const ButtonPanel = props => {
+  const { clickHandler } = props;
+  return (
+    <div style={panelStyle}>
+      <div style={rowStyle}>
+        <Button buttonName="AC" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="+/-" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="%" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="÷" clickHandler={clickHandler} />
+      </div>
+      <div style={rowStyle}>
+        <Button buttonName="7" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="8" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="9" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="X" clickHandler={clickHandler} />
+      </div>
+      <div style={rowStyle}>
+        <Button buttonName="4" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="5" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="6" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="-" clickHandler={clickHandler} />
+      </div>
+      <div style={rowStyle}>
+        <Button buttonName="1" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="2" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="3" clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="+" clickHandler={clickHandler} />
+      </div>
+      <div style={rowStyle}>
+        <Button buttonName="0" clickHandler={clickHandler} wide color="#e0e0e0" />
+        <Button buttonName="." clickHandler={clickHandler} color="#e0e0e0" />
+        <Button buttonName="=" clickHandler={clickHandler} />
+      </div>
     </div>
-    <div style={rowStyle}>
-      <Button buttonName="7" color="#e0e0e0" />
-      <Button buttonName="8" color="#e0e0e0" />
-      <Button buttonName="9" color="#e0e0e0" />
-      <Button buttonName="X" />
-    </div>
-    <div style={rowStyle}>
-      <Button buttonName="4" color="#e0e0e0" />
-      <Button buttonName="5" color="#e0e0e0" />
-      <Button buttonName="6" color="#e0e0e0" />
-      <Button buttonName="-" />
-    </div>
-    <div style={rowStyle}>
-      <Button buttonName="1" color="#e0e0e0" />
-      <Button buttonName="2" color="#e0e0e0" />
-      <Button buttonName="3" color="#e0e0e0" />
-      <Button buttonName="+" />
-    </div>
-    <div style={rowStyle}>
-      <Button buttonName="0" wide color="#e0e0e0" />
-      <Button buttonName="." color="#e0e0e0" />
-      <Button buttonName="=" />
-    </div>
-  </div>
-);
+  );
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;

@@ -23,25 +23,10 @@ This project will be deployed to Heroku.
 ### Prerequisites
 - Node
 
+## 👤 **Author: Sergio Diaz**
 
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author**
-
-- Github: [@githubhandle](https://github.com/serdg0)
-- Twitter: [@twitterhandle](https://twitter.com/sedzgzz)
-
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
+- Github: [@github](https://github.com/serdg0)
+- Twitter: [@twitter](https://twitter.com/sedzgzz)
 
 ## Show your support
 
